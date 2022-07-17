@@ -114,7 +114,7 @@ let app = {
       name: "Dịu Dàng Em Đến",
       singer: "ERIK",
       path: "../assets/music/Dịu Dàng Em Đến (Cukak Remix) - ERIK - Bài hát, lyrics.mp3",
-      image: '../assets/imgMusic/dde.png',
+      image: `../assets/imgMusic/dde.png`,
       duration: "03:21",
     },
 
@@ -286,7 +286,8 @@ let app = {
 		  _this.currenindex = Number(songNode.dataset.index);
 		  _this.loadCurrentSongs();
 		  _this.renderDisplay();
-		  audio.play();
+		listsongstop.innerText = 10 - _this.currenindex
+		audio.play();
 		  arrRight.push(uhtmls[_this.currenindex]);
 		}
 		iconSongBottomRIGHT.innerHTML = arrRight.join(" ");
@@ -298,9 +299,9 @@ let app = {
 		} else {
 		  _this.nextSong();
 		}
+		listsongstop.innerText = 10 - _this.currenindex
 		  arrRight.push(uhtmls[_this.currenindex]);		  
 		  audio.play();
-		listsongstop.innerText = 10 - _this.currenindex
 		iconSongBottomRIGHT.innerHTML = arrRight.join(" ");
   
 		_this.renderDisplay();
@@ -312,9 +313,9 @@ let app = {
 		} else {
 		  _this.prefSong();
 		}
+		listsongstop.innerText = 10 - _this.currenindex
 		  arrRight.push(uhtmls[_this.currenindex]);		  
 		  audio.play();
-		listsongstop.innerText = 10 - _this.currenindex
 		iconSongBottomRIGHT.innerHTML = arrRight.join(" ");
   
 		_this.renderDisplay();
@@ -550,8 +551,13 @@ let app = {
     this.loadCurrentSongs();
     this.renderDisplayBottomrifht();
     //Hiển thị trạng thái loop repeat
-    botRandom.classList.toggle("active-orange", this.isRandom);
-    botLoop.classList.toggle("active-orange", this.isLoop);
+	botRandom.classList.toggle("active-orange", this.isRandom);
+	botLoop.classList.toggle("active-orange", this.isLoop);
+	do {
+		botRandom.classList.toggle("active-orange", this.isRandom);
+		botLoop.classList.toggle("active-orange", this.isLoop);
+	 }
+	 while (false);
   },
 };
 app.start();
