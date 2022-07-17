@@ -1,0 +1,51 @@
+/* – Dùng để tạo biến chung, toàn cục cho trang web */
+$color-red: red;
+$white-color: white;
+$color-text: #555555;
+$color-text: #9a9a9a;
+$border-color: #d8d8d8;
+$primary-bg: #432275;
+$layout-bg: #170f23;
+$sidebar-popup-bg: #2a213a;
+$alpha-layout-bg: rgba(41, 21, 71, 0.8);
+$queue-player-popup-bg: #120822;
+$blur-queue-bg: rgba(30, 21, 47, 0.9019607843137255);
+$purple-primary: #7200a1;
+$link-text-hover: #c662ef;
+$chart-bg-img-alpha: rgba(32, 19, 53, 0.9);
+* {
+  text-decoration: none;
+  list-style-type: none;
+  font-family: "popin", sans-serif;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-decoration: none;
+  color: #555555;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+/*=============================================
+=            animation            =
+=============================================*/
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+  }
+}
+
+/*=====  End of animation  ======*/
