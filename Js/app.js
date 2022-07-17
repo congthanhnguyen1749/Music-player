@@ -114,7 +114,7 @@ let app = {
       name: "Dịu Dàng Em Đến",
       singer: "ERIK",
       path: "../assets/music/Dịu Dàng Em Đến (Cukak Remix) - ERIK - Bài hát, lyrics.mp3",
-      image: `../assets/imgMusic/dde.png`,
+      image: '../assets/imgMusic/dde.png',
       duration: "03:21",
     },
 
