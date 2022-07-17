@@ -1,0 +1,329 @@
+@import "./global";
+// dùng để tạo scss cho thanh menu trên cùng
+
+@media only screen and (max-width: 1400px) {
+  .content {
+    //content
+    &-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      &-left {
+        width: 20%;
+      }
+
+      &-centet {
+        width: 80%;
+        border: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .content-top-center {
+        width: 100%;
+      }
+
+      &-right {
+        display: none;
+      }
+
+	  .box-sale {
+		  min-width: 190px;
+	  }
+    }
+    // menu
+    &-bottom {
+      width: 100%;
+
+      .media {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &-left {
+          width: 20.333333%;
+        }
+
+        &-content {
+          width: 46.333333%;
+          margin-left: 10px;
+          margin-right: 20px;
+        }
+
+        &-right {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 33.333333%;
+
+          .media-right-item {
+            margin-left: 0;
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 1140px) {
+  .content {
+    //content
+    &-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      &-left {
+        display: none;
+      }
+
+      &-centet {
+        width: 80%;
+        border: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .content-top-center {
+        width: 100%;
+      }
+
+      &-right {
+        display: none;
+      }
+
+	  .box-sale {
+		  min-width: 190px;
+	  }
+    }
+    // menu
+    &-bottom {
+      width: 100%;
+
+      .media {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &-left {
+          width: 20.333333%;
+		  display: none;
+        }
+
+        &-content {
+          width: 70%;
+          margin-left: 10px;
+          margin-right: 20px;
+		  padding: 0 10px;
+        }
+
+        &-right {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 30%;
+
+          .media-right-item {
+            margin-left: 0;
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 845px) {
+	
+
+	
+  .content {
+    //content
+	
+    &-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      &-left {
+        display: none;
+      }
+
+      &-centet {
+        width: 80%;
+        border: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .content-top-center {
+        width: 100%;
+
+
+		.content-top-center-body-view {
+			.box-content {
+				.box-sun-library{
+					.box-sun-library-cover {
+						.box-sun-library-cover-singer {
+							.box-sun-library-cover-singer-box {
+								&:nth-child(5) {
+									display: none;
+								}
+								&:nth-child(4) {
+									display: none;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+      }
+
+      &-right {
+        display: none;
+      }
+
+	  .box-sale {
+		  min-width: 190px;
+	  }
+    }
+    // menu
+    &-bottom {
+      width: 100%;
+		display: flex;
+		justify-content: space-evenly;
+      .media {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &-left {
+          width: 20.333333%;
+		  display: none;
+        }
+
+        &-content {
+          width: 100%;display: flex;
+		  justify-content: center;
+		  flex-direction: column;
+          margin-left: 10px;
+          margin-right: 20px;
+		  padding: 0 10px;
+        }
+
+        &-right {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 30%;
+			display: none;
+          .media-right-item {
+            margin-left: 0;
+          }
+        }
+		
+      }
+	  .player-controls-right {
+		display: none;
+	}
+    }
+  }
+
+  .tab-pane-content-1{
+	&-left {
+		display: none;
+	}
+	&-right {
+		width: 100%;
+	}
+}
+.content-top-center-body-view .box-content .box-sun-song-cover-tab .tab-content .tab-pane .tab-pane-content-1-right {
+	width: 100%;
+
+}
+}
+
+
+@media only screen and (max-width: 500px) {
+	.content {
+	  //content
+	  &-top {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		width: 100%;
+		&-left {
+		  width: 20%;
+		}
+  
+		&-centet {
+		  width: 80%;
+		  border: none;
+		  display: flex;
+		  justify-content: center;
+		  align-items: center;
+		}
+		.content-top-center {
+		  width: 100%;
+		}
+  
+		&-right {
+		  display: none;
+		}
+  
+		.box-sale {
+			min-width: 190px;
+		}
+	  }
+	  // menu
+	  &-bottom {
+		width: 100%;
+  
+		.media {
+		  display: flex;
+		  justify-content: center;
+		  align-items: center;
+		  display: none;
+		  &-left {
+			width: 20.333333%;
+		  }
+  
+		  &-content {
+			width: 46.333333%;
+			margin-left: 10px;
+			margin-right: 20px;
+		  }
+  
+		  &-right {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 33.333333%;
+  
+			.media-right-item {
+			  margin-left: 0;
+			}
+		  }
+		}
+	  }
+	}
+	.content-top-center-header-view {
+		display: none;
+	}
+	.content-top-center-body-view .box-content .box-sun-library-cover-singer {
+		display: none;
+	}
+	.content-top-center-body-view .box-content .box-sun-library {
+		height: 4vh;
+	}
+	.songs-item {
+		display: none;
+		&-img {
+			width: 33.333333%;
+		}
+
+		&-title {
+width: 33.333333%;
+		}
+
+		&-time {
+width: 33.333333%;
+		}
+	}
+  }
