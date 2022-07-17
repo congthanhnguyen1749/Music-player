@@ -1,0 +1,1426 @@
+@import "./global";
+
+/* – Để dành viết CSS cho việc lên bố cục cho website như chia cột. */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.content {
+  //<!-- Nội dung trên menu -->
+  &-top {
+    background-color: $layout-bg;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+    //nội dung tab menu bên trái
+    &-left {
+      width: 15%;
+      height: 90vh;
+      background-color: #221b2e;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-direction: column;
+      //logo
+      &-brand {
+        width: 100%;
+        display: flex;
+        height: 5vh;
+        align-items: center;
+        img {
+          max-height: 100%;
+          width: 110px;
+          margin-left: 25px;
+          margin-top: 10px;
+        }
+      }
+      //navbar-menu
+      &-wrapper {
+        width: 100%;
+        height: 80vh;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        //selection list top
+        &-top {
+          height: 24vh;
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+          ul {
+            width: 100%;
+            margin: 10px 0;
+            li {
+              padding: 11px 30px;
+              &:hover {
+                background-color: rgba(130, 120, 120, 0.15);
+              }
+              a {
+                i {
+                  font-weight: 300;
+                  color: white;
+                  font-size: 16px;
+                  margin-right: 12px;
+                }
+
+                span {
+                  font-weight: 200;
+                  font-size: 16px;
+                  color: white;
+                }
+              }
+            }
+
+            .active {
+              background-color: rgba(130, 120, 120, 0.15);
+            }
+          }
+        }
+
+        &-bottom {
+          background-color: blue;
+          height: 56vh;
+          background-color: #221b2e;
+          border-top: 1px solid #89868e;
+          display: flex;
+          align-items: center;
+          width: 100%;
+          flex-direction: column;
+          ul {
+            width: 100%;
+
+            li {
+              padding: 11px 30px;
+              &:first-child {
+                margin-top: 10px;
+              }
+              &:hover {
+                background-color: rgba(130, 120, 120, 0.15);
+              }
+              a {
+                i {
+                  font-weight: 300;
+                  color: white;
+                  font-size: 16px;
+                  margin-right: 12px;
+                }
+
+                span {
+                  font-weight: 200;
+                  font-size: 16px;
+                  color: white;
+                }
+              }
+            }
+
+            .active {
+              background-color: rgba(130, 120, 120, 0.15);
+            }
+          }
+
+          .box-sale {
+            min-width: 220px;
+            background-image: linear-gradient(117deg, #5a4be7, #c86dd7 102%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            border-radius: 8px;
+            -webkit-border-radius: 8px;
+            -moz-border-radius: 8px;
+            -ms-border-radius: 8px;
+            -o-border-radius: 8px;
+            margin-top: 10px;
+            span {
+              width: 180px;
+              color: white;
+              font-weight: 600;
+              font-size: 13px;
+              text-align: center;
+              padding-top: 10px;
+            }
+
+            button {
+              background-color: gold;
+              border: none;
+              border-radius: 8px;
+              -webkit-border-radius: 8px;
+              -moz-border-radius: 8px;
+              -ms-border-radius: 8px;
+              -o-border-radius: 8px;
+              height: 30px;
+              width: 130px;
+              font-weight: 600;
+              font-size: 11px;
+              cursor: pointer;
+              color: rgb(62, 26, 71);
+              &:hover {
+                cursor: pointer;
+                color: #f7e6e6;
+              }
+              margin-bottom: 10px;
+              margin-top: 10px;
+            }
+          }
+
+          .last {
+            width: 100%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            .libary {
+              width: 100%;
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              margin-top: 20px;
+              cursor: pointer;
+
+              h3 {
+                font-weight: 400;
+                font-size: 16px;
+                color: white;
+                margin: 0 15px;
+              }
+              i {
+                font-weight: 300;
+                color: white;
+                cursor: pointer;
+                font-size: 13px;
+                margin: 0 15px;
+              }
+            }
+
+            ul {
+              width: 100%;
+              li {
+                i {
+                  font-weight: 300;
+                  color: white;
+                  font-size: 16px;
+                  cursor: pointer;
+                  margin-right: 12px;
+                }
+                a {
+                  font-weight: 200;
+                  font-size: 16px;
+                  color: white;
+                }
+              }
+            }
+          }
+
+          .seentime {
+            display: flex;
+            cursor: pointer;
+            flex-direction: column;
+            width: 100%;
+            h4 {
+              font-weight: 200;
+              font-size: 15px;
+              color: white;
+
+              margin: 8px 30px;
+            }
+          }
+        }
+      }
+      //new playlist
+      &-new {
+        background-color: #221b2e;
+        height: 5vh;
+        width: 100%;
+        border-top: 1px solid #89868e;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &:hover {
+          cursor: pointer;
+          background-color: rgba(130, 120, 120, 0.15);
+        }
+        i {
+          color: white;
+          padding: 5px;
+          font-weight: 400;
+          font-size: 15px;
+        }
+
+        h4 {
+          color: white;
+          padding: 5px;
+          font-weight: 400;
+          font-size: 14px;
+        }
+      }
+    }
+
+    //nội dung tab content ở giữa
+    &-center {
+      width: 65%;
+      height: 90vh;
+      position: relative;
+      //header searching
+      &-header-view {
+        background-color: #170f23;
+        position: absolute;
+        width: 100%;
+        height: 73px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 100000;
+        //center top left searching
+        &-left {
+          width: 65%;
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          i {
+            font-weight: 100;
+            color: #5c5664;
+            font-size: 28px;
+            margin-right: 20px;
+
+            &:hover {
+              color: #dadada;
+            }
+          }
+
+          .input-search {
+            background-color: rgba(130, 120, 120, 0.15);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            width: 70%;
+
+            &:hover i {
+              color: #dadada;
+            }
+            i {
+              font-weight: 100;
+              font-size: 18px;
+              margin-right: 5px;
+              margin-left: 10px;
+              color: #5c5664;
+
+              padding: 10px;
+            }
+
+            input {
+              border: none;
+              width: 540px;
+              background-color: transparent;
+              border: none;
+              outline: none;
+              height: 40px;
+              color: #dadada;
+
+              &::placeholder {
+                font-weight: 400;
+                font-size: 15px;
+                color: rgba(255, 255, 255, 0.295);
+              }
+            }
+            border-radius: 50px;
+            -webkit-border-radius: 50px;
+            -moz-border-radius: 50px;
+            -ms-border-radius: 50px;
+            -o-border-radius: 50px;
+          }
+        }
+
+        &-right {
+          width: 35%;
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          &-box {
+            border-radius: 50%;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            -ms-border-radius: 50%;
+            -o-border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            margin: 10px 7px;
+            background-color: rgba(130, 120, 120, 0.15);
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &:hover i {
+              color: white;
+              cursor: pointer;
+            }
+            i {
+              font-weight: 300;
+              font-size: 18px;
+              color: #8f8a96;
+            }
+
+            svg {
+              font-weight: 300;
+              width: 22px;
+              height: 22px;
+            }
+            &:last-child {
+              background-image: url(../assets/images/9e3bfb0a08a3d09e337957170905fd58.jpg);
+              object-fit: cover;
+              background-size: cover;
+              background-repeat: no-repeat;
+            }
+          }
+        }
+      }
+      //thân dưới chứa các list, các bản nhạc, các tab chọn
+      &-body-view {
+        //content library
+        .box-content {
+          width: 100%;
+          height: 100vh;
+          z-index: 1;
+          overflow: scroll;
+          .box-sun-library {
+            width: 100%;
+            height: 30vh;
+            margin-top: 73px;
+            display: flex;
+
+            &-cover {
+              width: 90%;
+              margin: 0 auto;
+
+              &-title {
+                display: flex;
+                height: 25%;
+                align-items: flex-end;
+                margin-bottom: 20px;
+                h1 {
+                  font-size: 40px;
+                  font-weight: 300;
+                  line-height: 48px;
+                  color: white;
+                }
+
+                .box-i {
+                  width: 40px;
+                  height: 40px;
+                  background-color: #c187d8;
+                  display: grid;
+                  place-items: center;
+                  margin: 0px 0 0 15px;
+                  &:hover {
+                    background-color: #221b2e;
+                  }
+                  i {
+                    font-weight: 900;
+                    font-size: 15px;
+                    padding: 10px;
+                    color: white;
+                    object-fit: cover;
+                  }
+                  border-radius: 50%;
+                  -webkit-border-radius: 50%;
+                  -moz-border-radius: 50%;
+                  -ms-border-radius: 50%;
+                  -o-border-radius: 50%;
+                }
+              }
+
+              &-singer {
+                width: 100%;
+                height: 200px;
+
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                &-box {
+                  width: 160px;
+                  display: grid;
+                  place-items: center;
+                  .ushover:hover {
+                    transform: scale(1.03);
+                    -webkit-transform: scale(1.03);
+                    -moz-transform: scale(1.03);
+                    -ms-transform: scale(1.03);
+                    -o-transform: scale(1.03);
+                    transition: all 0.5s linear;
+                    -webkit-transition: all 0.5s linear;
+                    -moz-transition: all 0.5s linear;
+                    -ms-transition: all 0.5s linear;
+                    -o-transition: all 0.5s linear;
+                  }
+
+                  &-user {
+                    width: 120px;
+                    height: 120px;
+                    border-radius: 50%;
+                    -webkit-border-radius: 50%;
+                    -moz-border-radius: 50%;
+                    -ms-border-radius: 50%;
+                    -o-border-radius: 50%;
+                    background-image: url(../assets/Tuanhung/tuan-hung-hut-vai-ph-5434.jpeg);
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                  }
+                  &-user-2 {
+                    width: 120px;
+                    height: 120px;
+                    border-radius: 50%;
+                    -webkit-border-radius: 50%;
+                    -moz-border-radius: 50%;
+                    -ms-border-radius: 50%;
+                    -o-border-radius: 50%;
+                    background-image: url(../assets/Tuanhung/kp.jpeg);
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                  }
+                  &-user-3 {
+                    width: 120px;
+                    height: 120px;
+                    border-radius: 50%;
+                    -webkit-border-radius: 50%;
+                    -moz-border-radius: 50%;
+                    -ms-border-radius: 50%;
+                    -o-border-radius: 50%;
+                    background-image: url(../assets/Tuanhung/ca-si-ho-quang-hieu-tro-thanh-dai-su-thuong-hieu-cua-thuc-son-4d-chon-mat-gui-vang-game-quoc-dan-la-phai-chon-danh-hai-quoc-dan.jpeg);
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                  }
+                  &-user-4 {
+                    width: 120px;
+                    height: 120px;
+                    border-radius: 50%;
+                    -webkit-border-radius: 50%;
+                    -moz-border-radius: 50%;
+                    -ms-border-radius: 50%;
+                    -o-border-radius: 50%;
+                    background-image: url(../assets/Tuanhung/khacviet11.jpeg);
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                  }
+                  &-user-5 {
+                    width: 120px;
+                    height: 120px;
+                    border-radius: 50%;
+                    -webkit-border-radius: 50%;
+                    -moz-border-radius: 50%;
+                    -ms-border-radius: 50%;
+                    -o-border-radius: 50%;
+                    background-image: url(../assets/Tuanhung/chidân.jpeg);
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                  }
+                  &-user-1 {
+                    width: 120px;
+                    height: 120px;
+                    border-radius: 50%;
+                    -webkit-border-radius: 50%;
+                    -moz-border-radius: 50%;
+                    -ms-border-radius: 50%;
+                    -o-border-radius: 50%;
+                    position: relative;
+                    display: grid;
+                    border: 2px solid #7c728d;
+                    place-items: center;
+                    i {
+                      position: absolute;
+                      font-weight: 100;
+                      font-size: 35px;
+                      color: #e0dee4;
+                    }
+                  }
+
+                  h3 {
+                    font-weight: 400;
+                    font-size: 16px;
+                    margin-top: 15px;
+                    color: rgb(216, 208, 208);
+                  }
+                }
+              }
+            }
+          }
+
+          .box-sun-song {
+            width: 100%;
+            height: 85%;
+            overflow: scroll;
+
+            &-cover {
+              width: 90%;
+              margin: 0 auto;
+
+              &-tab {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                .tabs {
+                  width: 100%;
+                  height: 7vh;
+                  display: flex;
+                  align-items: center;
+                  margin: 20px 0px 5px 0;
+                  position: relative;
+                  .tab-item {
+                    display: flex;
+                    margin: 20px 10px;
+                    padding: 20px 0;
+                    cursor: pointer;
+                    align-items: center;
+                    justify-content: center;
+                    h3 {
+                      color: rgba(255, 255, 255, 0.527);
+                      font-size: 13px;
+                      font-weight: 500;
+                      width: 144px;
+                      text-align: center;
+                      padding: 20px 5px;
+
+                      &:hover {
+                        color: rgba(255, 255, 255, 0.938);
+                      }
+                      border-top-left-radius: 8px;
+                      border-top-right-radius: 8px;
+                    }
+                  }
+                  //nut active
+                  .active-item h3 {
+                    color: rgb(255, 255, 255);
+                  }
+
+                  .line {
+                    position: absolute;
+                    border-radius: 8px;
+                    -webkit-border-radius: 8px;
+                    -moz-border-radius: 8px;
+                    -ms-border-radius: 8px;
+                    -o-border-radius: 8px;
+                    width: 151px;
+                    bottom: 10px;
+                    left: 11px;
+                    height: 3px;
+                    background-color: rgba(202, 119, 250, 0.432);
+                    transition: all 0.3s;
+                    -webkit-transition: all 0.3s;
+                    -moz-transition: all 0.3s;
+                    -ms-transition: all 0.3s;
+                    -o-transition: all 0.3s;
+                  }
+                }
+
+                .tab-content {
+                  width: 100%;
+                  display: flex;
+                  align-items: center;
+                  flex-direction: column;
+
+                  //   tabpane
+                  .tab-pane {
+                    height: 50vh;
+                    width: 100%;
+                    margin: 20px;
+                    display: none;
+                    //pane---1
+                    .tab-pane-content-1 {
+                      height: 100%;
+                      display: flex;
+                      align-items: center;
+
+                      &-left {
+                        width: 35%;
+                        height: 100%;
+                        overflow: hidden;
+                        position: relative;
+                      }
+
+                      &-right {
+                        width: 65%;
+                        height: 100%;
+                        overflow: auto;
+                        border-right: 1px solid rgba(83, 62, 95, 0.212);
+                        .list-songs-top {
+                          width: 100%;
+                          height: 4vh;
+                          display: flex;
+                          justify-content: space-between;
+                          align-items: center;
+
+                          h4 {
+                            margin: 0 20px;
+                            font-weight: 300;
+                            font-size: 13px;
+                            color: rgba(255, 255, 255, 0.527);
+
+							span{
+								font-weight: 300;
+								color: rgba(255, 255, 255, 0.527);
+								font-size: 13px;
+								margin-left: 3px;
+							}
+                          }
+						  
+                        }
+                        .list-songs-bottom {
+                          width: 100%;
+                          height: 46vh;
+                          display: flex;
+                          align-items: center;
+                          flex-direction: column;
+                          overflow: auto;
+                          //danh sach nhac tong quan
+                          .songs-item {
+                            width: 100%;
+                            height: 5vh;
+                            display: flex;
+                            cursor: pointer;
+                            justify-content: center;
+                            align-items: center;
+                            border-bottom: 1px dotted rgba(149, 43, 248, 0.219);
+                            border-top: 1px dotted rgba(149, 43, 248, 0.219);
+                            padding: 40px 0;
+                            margin: 7px 0;
+
+                            &:hover {
+                              background-color: rgba(130, 120, 120, 0.15);
+                            }
+                            &:hover .song-icon-play {
+                              display: block;
+                            }
+                            &-img {
+                              width: 43.3333333%;
+                              display: flex;
+                              &-boxImg {
+                                width: 30%;
+                                height: 5vh;
+                                display: flex;
+                                position: relative;
+                                justify-content: center;
+                                align-items: center;
+
+                                .songs-img {
+                                  width: 50px;
+                                  height: 50px;
+                                  object-fit: cover;
+                                  border-radius: 8px;
+                                  -webkit-border-radius: 8px;
+                                  -moz-border-radius: 8px;
+                                  -ms-border-radius: 8px;
+                                  -o-border-radius: 8px;
+                                }
+
+                                i {
+                                  position: absolute;
+                                  top: 18px;
+                                  left: 38px;
+                                  display: flex;
+                                  justify-content: center;
+                                  align-items: center;
+                                  color: white;
+                                  display: none;
+                                }
+
+                                .playingIcon {
+                                  position: absolute;
+                                  top: 8px;
+                                  left: 27px;
+                                  color: white;
+                                  width: 32px;
+                                  height: 32px;
+                                  display: none;
+                                  object-fit: contain;
+                                }
+                              }
+
+                              &-boxTitle {
+                                height: 5vh;
+                                width: 70%;
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: center;
+                                h3 {
+                                  font-weight: 300;
+                                  font-size: 16px;
+                                  color: white;
+                                  margin: 5px 0;
+                                }
+                                h4 {
+                                  font-weight: 300;
+                                  font-size: 13px;
+                                  color: #7b7583;
+                                  margin: 5px 0;
+                                }
+                              }
+                            }
+
+                            &-title {
+                              width: 23.3333333%;
+                              height: 5vh;
+                            }
+
+                            &-time {
+                              width: 33.3333333%;
+                              height: 5vh;
+
+                              display: flex;
+                              justify-content: flex-end;
+                              align-items: center;
+
+                              i {
+                                font-weight: 400;
+                                font-size: 13px;
+                                color: white;
+                                padding: 10px;
+                              }
+
+                              h4 {
+                                font-weight: 300;
+                                font-size: 16px;
+                                color: white;
+                                padding: 10px;
+                                margin-right: 10px;
+                              }
+                            }
+                          }
+                          .active-bgc {
+                            background-color: rgba(130, 120, 120, 0.15);
+                          }
+                        }
+                      }
+                    }
+
+                    .tab-pane-content-2 {
+                      width: 100%;
+                      height: 70vh;
+
+                      &-top {
+                        width: 100%;
+                        height: 10vh;
+                        display: flex;
+                        justify-content: center;
+                        flex-direction: column;
+                        &-love {
+                          display: flex;
+                          margin: 20px 20px;
+                          h4 {
+                            font-weight: 300;
+                            font-size: 13px;
+                            padding: 7px 24px;
+                            border-radius: 50px;
+                            margin: 0 5px;
+                            color: white;
+                            -webkit-border-radius: 50px;
+                            -moz-border-radius: 50px;
+                            -ms-border-radius: 50px;
+                            -o-border-radius: 50px;
+                            background-color: #7200a1;
+                            cursor: pointer;
+                          }
+                          h3 {
+                            font-weight: 300;
+                            font-size: 13px;
+                            padding: 7px 24px;
+                            border: 1px solid white;
+                            border-radius: 50px;
+                            margin: 0 5px;
+                            color: white;
+                            -webkit-border-radius: 50px;
+                            -moz-border-radius: 50px;
+                            -ms-border-radius: 50px;
+                            -o-border-radius: 50px;
+                            cursor: pointer;
+                          }
+                        }
+
+                        &-title {
+                          height: 5vh;
+                          width: 100%;
+                          display: flex;
+                          justify-content: space-between;
+                          align-items: center;
+
+                          h4 {
+                            font-weight: 300;
+                            font-size: 13px;
+                            color: rgba(255, 255, 255, 0.527);
+                            padding: 0px 40px;
+                            margin: 20px 0;
+                          }
+                        }
+                      }
+
+                      &-bottom {
+                        width: 100%;
+                        height: 50vh;
+                        overflow-y: auto;
+                        .list-item-songs2 {
+                          width: 100%;
+                          height: 8vh;
+                          display: flex;
+                          margin: 5px 0;
+                          &:hover {
+                            background-color: rgba(85, 74, 74, 0.233);
+                          }
+                          border-bottom: 1px solid rgba(85, 74, 74, 0.233);
+                          border-top: 1px solid rgba(85, 74, 74, 0.233);
+                          &-left {
+                            width: 40%;
+                            height: 8vh;
+                            display: flex;
+                            align-items: center;
+                            i {
+                              color: rgba(187, 172, 172, 0.39);
+                              font-weight: 400;
+                              font-size: 16px;
+                              margin: 10px;
+                            }
+                            &:hover .items-song2-img i {
+                              display: block;
+                            }
+                            .items-song2-img {
+                              position: relative;
+                              img {
+                                width: 50px;
+                                height: 50px;
+                                object-fit: cover;
+                                border-radius: 8px;
+                                -webkit-border-radius: 8px;
+                                -moz-border-radius: 8px;
+                                -ms-border-radius: 8px;
+                                -o-border-radius: 8px;
+                              }
+
+                              i {
+                                position: absolute;
+                                top: 10px;
+                                left: 10px;
+                                color: white;
+                                font-weight: 400;
+                                font-size: 18px;
+                                display: none;
+                              }
+                              .imgpro {
+                                position: absolute;
+                                top: 13px;
+                                left: 13px;
+                                color: white;
+                                width: 30px;
+                                display: none;
+                                height: 30px;
+                              }
+                            }
+
+                            &-title {
+                              h3 {
+                                font-weight: 300;
+                                font-size: 15px;
+                                color: white;
+                                margin: 5px 10px;
+                                padding: 0 10px;
+                              }
+
+                              h4 {
+                                font-weight: 300;
+                                font-size: 13px;
+                                color: rgba(197, 181, 181, 0.507);
+                                margin: 0px 10px;
+                                padding: 3px 10px;
+                              }
+                            }
+                          }
+
+                          &-center {
+                            width: 20%;
+                            height: 8vh;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+
+                            h4 {
+                              font-weight: 300;
+                              font-size: 14px;
+                              color: rgba(255, 255, 255, 0.603);
+                            }
+                          }
+
+                          &-right {
+                            width: 40%;
+                            height: 8vh;
+                            display: flex;
+                            justify-content: flex-end;
+                            align-items: center;
+
+                            i {
+                              font-weight: 400;
+                              font-size: 15px;
+                              color: white;
+                              padding: 10px 20px;
+
+                              &:hover {
+                                color: red;
+                              }
+                            }
+
+                            h4 {
+                              font-weight: 300;
+                              font-size: 15px;
+                              color: white;
+                              padding: 10px 20px;
+                              margin-right: 20px;
+                            }
+                          }
+                        }
+                      }
+                    }
+                    .tab-pane-content-3 {
+                      width: 100%;
+                      height: 35vh;
+                      display: flex;
+                      justify-content: center;
+                      align-items: center;
+                      flex-direction: column;
+                      &-top {
+                        width: 100%;
+                        height: 5vh;
+                        line-height: 5vh;
+                        color: rgba(255, 255, 255, 0.623);
+                      }
+                      &-bottom {
+                        width: 100%;
+                        height: 30vh;
+                        background-color: rgba(129, 114, 114, 0.233);
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        flex-direction: column;
+
+                        i {
+                          font-weight: 400;
+                          font-size: 40px;
+                          color: rgba(238, 230, 230, 0.445);
+                          margin-bottom: 5px;
+                        }
+
+                        h3 {
+                          font-weight: 400;
+                          font-size: 20px;
+                          color: rgba(238, 230, 230, 0.445);
+                        }
+                      }
+                    }
+                  }
+                  //nut active
+                  .active-content {
+                    display: block;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    //nội dung tab menu bên Phải
+    &-right {
+      width: 20%;
+      height: 90vh;
+      border-left: 5px double rgba(130, 120, 120, 0.15);
+		overflow: auto;
+      &-bars {
+        height: 70px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+		cursor: pointer;
+        &-box {
+		cursor: pointer;
+		display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: rgba(130, 120, 120, 0.15);
+          margin-left: 10px;
+          overflow: hidden;
+          width: 260px;
+          border-radius: 50px;
+          -webkit-border-radius: 50px;
+          -moz-border-radius: 50px;
+          -ms-border-radius: 50px;
+          -o-border-radius: 50px;
+          h4 {
+            padding: 10px 15px;
+            font-weight: 300;
+            font-size: 13px;
+            color: white;
+          }
+		  
+          .acc {
+            padding: 10px 20px;
+
+            background-color: rgba(130, 120, 120, 0.384);
+            border-radius: 50px;
+            -webkit-border-radius: 50px;
+            -moz-border-radius: 50px;
+            -ms-border-radius: 50px;
+            -o-border-radius: 50px;
+          }
+          h3 {
+            padding: 10px 15px;
+            font-weight: 300;
+            font-size: 13px;
+            color: white;
+          }
+        }
+
+        &-icon {
+          width: 35px;
+          height: 35px;
+          background-color: rgba(130, 120, 120, 0.15);
+          border-radius: 50px;
+          -webkit-border-radius: 50px;
+          -moz-border-radius: 50px;
+          -ms-border-radius: 50px;
+          -o-border-radius: 50px;
+          display: grid;
+          place-items: center;
+          margin: 2px;
+          i {
+            font-weight: 300;
+            font-size: 15px;
+            color: white;
+          }
+        }
+      }
+
+      &-list {
+        ul {
+          li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 65px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            padding: 10px 0;
+            width: 100%;
+            border-top: 1px double rgba(130, 120, 120, 0.15);
+            cursor: pointer;
+            &:hover {
+              background-color: rgba(130, 120, 120, 0.15);
+            }
+            .li-left {
+              height: 65px;
+              width: 60%;
+              display: flex;
+              align-items: center;
+              margin-left: 20px;
+              img {
+                width: 50px;
+                height: 50px;
+                border-radius: 8px;
+                -webkit-border-radius: 8px;
+                -moz-border-radius: 8px;
+                -ms-border-radius: 8px;
+                -o-border-radius: 8px;
+              }
+
+              &-text {
+                h4 {
+                  font-weight: 400;
+                  font-size: 14px;
+                  color: rgba(255, 255, 255, 0.671);
+
+                  padding: 5px 10px 3px 10px;
+                }
+
+                span {
+                  font-weight: 300;
+                  font-size: 13px;
+                  color: rgba(255, 255, 255, 0.418);
+
+                  padding: 5px 10px 3px 10px;
+                }
+              }
+            }
+
+            .li-right {
+              width: 40%;
+              height: 65px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+
+              i {
+                font-weight: 300;
+                font-size: 14px;
+                color: rgba(255, 255, 255, 0.418);
+                padding: 10px 15px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  //Phần chứa thanh công cụ điều khuyển song
+
+  &-bottom {
+    height: 10vh;
+    width: 100%;
+    background-color: #120c1c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // chứa nội dung bài hát đang phát
+    .media {
+      width: 26%;
+      height: 10vh;
+      background-color: #120c1c;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+
+      &-left {
+        border-radius: 50px;
+        overflow: hidden;
+
+        margin-left: 45px;
+        &-img {
+          border-radius: 50px;
+          max-height: 100%;
+          width: 65px;
+          object-fit: cover;
+          cursor: pointer;
+          transition: all 10s ease-in;
+          -webkit-transition: all 10s ease-in;
+          -moz-transition: all 10s ease-in;
+          -ms-transition: all 10s ease-in;
+          -o-transition: all 10s ease-in;
+        }
+      }
+      &-content {
+        h3 {
+          color: #ffffff;
+          font-size: 17px;
+          font-weight: 300;
+          cursor: pointer;
+        }
+
+        h4 {
+          color: #89868e;
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 32px;
+          cursor: pointer;
+        }
+      }
+      &-right {
+        &-item {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-left: 90px;
+          &-heart {
+            i {
+              font-weight: 400;
+              font-size: 17px;
+              padding: 10px;
+              color: #ffffff;
+              cursor: pointer;
+            }
+          }
+
+          &-dot {
+            i {
+              font-weight: 400;
+              font-size: 17px;
+              padding: 10px;
+              color: #ffffff;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+    // chứa thanh menu-bar
+    .player-bar {
+      width: 50%;
+      &-top {
+        height: 4vh;
+        overflow: hidden;
+        background-color: #120c1c;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        &-item {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          button {
+            padding: 20px;
+            background-color: #120c1c;
+            outline: none;
+            border: none;
+            cursor: pointer;
+            i {
+              font-weight: 100;
+              font-size: 17px;
+              color: #ffffff;
+            }
+
+            .icon-control-pause {
+              display: none;
+            }
+          }
+        }
+      }
+
+      &-bottom {
+        height: 2vh;
+        background-color: #120c1c;
+        margin-bottom: 10px;
+        display: flex;
+
+        .player-bar-bottom-left {
+          display: flex;
+          justify-content: flex-end;
+          align-items: center;
+          width: 20%;
+          padding: 10px;
+          h4 {
+            font-weight: 300;
+            font-size: 14px;
+            color: #89868e;
+          }
+        }
+
+        .player-bar-bottom-center {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 60%;
+          input {
+            font-weight: 300;
+            width: 100%;
+            color: #fff;
+            background-color: #fff;
+            border: #fff;
+          }
+
+          .progress {
+            width: 100%;
+            -webkit-appearance: none;
+            height: 1px;
+            background: #c5cbce;
+            outline: none;
+            opacity: 0.7;
+            -webkit-transition: 0.2s;
+            transition: opacity 0.2s;
+          }
+
+          .progress::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 10px;
+            height: 10px;
+            background-color: white;
+            cursor: pointer;
+            border-radius: 5%;
+            -webkit-border-radius: 5%;
+            -moz-border-radius: 5%;
+            -ms-border-radius: 5%;
+            -o-border-radius: 5%;
+          }
+        }
+        .player-bar-bottom-right {
+          display: flex;
+          align-items: center;
+          padding: 10px;
+          width: 20%;
+          h4 {
+            font-weight: 300;
+            font-size: 14px;
+            color: rgb(182, 180, 180);
+          }
+        }
+      }
+    }
+    // chứa thanh menu-bar-right
+    .player-controls-right {
+      width: 24%;
+      height: 10vh;
+      background-color: #120c1c;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      button {
+        padding: 10px;
+        background-color: #120c1c;
+        outline: none;
+        border: none;
+        cursor: pointer;
+        i {
+          font-weight: 100;
+          font-size: 16px;
+          color: #ffffff;
+        }
+      }
+
+      input {
+        cursor: pointer;
+      }
+      .progress {
+        width: 30%;
+        -webkit-appearance: none;
+        height: 1px;
+        background: #c5cbce;
+        outline: none;
+        opacity: 0.7;
+        -webkit-transition: 0.2s;
+        transition: opacity 0.2s;
+      }
+
+      .progress::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 10px;
+        height: 10px;
+        background-color: white;
+        cursor: pointer;
+        border-radius: 5%;
+        -webkit-border-radius: 5%;
+        -moz-border-radius: 5%;
+        -ms-border-radius: 5%;
+        -o-border-radius: 5%;
+      }
+    }
+  }
+}
+.active-orange {
+  color: orange !important;
+}
+.active-bgcc {
+  background-color: rgba(85, 74, 74, 0.233);
+}
+.hi {
+  color: red !important;
+}
