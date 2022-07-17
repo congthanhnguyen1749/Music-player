@@ -202,7 +202,7 @@ let app = {
 			  />
 			  <i class="fas fa-play song-icon-play"></i>
 			<img
-			  src="${song.image}""
+			  src="https://zmp3-static.zmdcdn.me/skins/zmp3-v6.1/images/icons/icon-playing.gif""
 			  class="songs-img"
 			/>
 		  </div>
