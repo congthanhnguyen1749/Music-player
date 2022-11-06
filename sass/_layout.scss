@@ -9,6 +9,7 @@
 }
 
 .content {
+  height: 100vh;
   //<!-- Nội dung trên menu -->
   &-top {
     background-color: $layout-bg;
@@ -392,6 +393,7 @@
           height: 100vh;
           z-index: 1;
           overflow: scroll;
+
           .box-sun-library {
             width: 100%;
             height: 30vh;
@@ -577,6 +579,7 @@
                   align-items: center;
                   margin: 20px 0px 5px 0;
                   position: relative;
+                  overflow: hidden;
                   .tab-item {
                     display: flex;
                     margin: 20px 10px;
@@ -667,14 +670,13 @@
                             font-size: 13px;
                             color: rgba(255, 255, 255, 0.527);
 
-							span{
-								font-weight: 300;
-								color: rgba(255, 255, 255, 0.527);
-								font-size: 13px;
-								margin-left: 3px;
-							}
+                            span {
+                              font-weight: 300;
+                              color: rgba(255, 255, 255, 0.527);
+                              font-size: 13px;
+                              margin-left: 3px;
+                            }
                           }
-						  
                         }
                         .list-songs-bottom {
                           width: 100%;
@@ -757,13 +759,13 @@
                                   font-weight: 300;
                                   font-size: 16px;
                                   color: white;
-                                  margin: 5px 0;
+                                  margin: 0px 5px 0 10px;
                                 }
                                 h4 {
                                   font-weight: 300;
                                   font-size: 13px;
                                   color: #7b7583;
-                                  margin: 5px 0;
+                                  margin: 0px 5px 0 10px;
                                 }
                               }
                             }
@@ -1041,16 +1043,16 @@
       width: 20%;
       height: 90vh;
       border-left: 5px double rgba(130, 120, 120, 0.15);
-		overflow: auto;
+      overflow: auto;
       &-bars {
         height: 70px;
         display: flex;
         justify-content: space-evenly;
         align-items: center;
-		cursor: pointer;
+        cursor: pointer;
         &-box {
-		cursor: pointer;
-		display: flex;
+          cursor: pointer;
+          display: flex;
           justify-content: center;
           align-items: center;
           background-color: rgba(130, 120, 120, 0.15);
@@ -1068,7 +1070,7 @@
             font-size: 13px;
             color: white;
           }
-		  
+
           .acc {
             padding: 10px 20px;
 
@@ -1419,8 +1421,19 @@
   color: orange !important;
 }
 .active-bgcc {
-  background-color: rgba(85, 74, 74, 0.233);
+  background-color: rgba(0, 0, 0, 0.233);
 }
 .hi {
   color: red !important;
+}
+#style-1::-webkit-scrollbar {
+  width: 2px;
+  background-color: #ffffff00;
+}
+#style-1::-webkit-scrollbar-thumb {
+  background-color: #ffffff00;
+}
+#style-1::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0);
+  background-color: #ffffff00;
 }
